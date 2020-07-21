@@ -31,4 +31,4 @@ jobs:
         ACTION_NAME: lauraivendi
         OWNER: lauraivendi
         REPO_NAME: test-wiki-docs
-
+        MD_FOLDER: docs/wiki
