@@ -22,7 +22,9 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
+    - name: build-markdown
+      run: docs/wiki/build.sh
+
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
       env:
