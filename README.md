@@ -6,7 +6,7 @@ It uses the nuget package [Vsxmd](https://github.com/lijunle/Vsxmd) to convert t
 
 And then uses an [action](https://github.com/lauraivendi/test-wiki-docs/blob/master/.github/workflows/main.yml) to trigger generating the wiki on commit
 
-The action uses [setup-dotnet](https://github.com/actions/setup-dotnet) to build the project (although I'm not sure the next step uses any changes this build might create)
+The action uses [setup-dotnet](https://github.com/actions/setup-dotnet) to build the project (although I'm not sure the next step uses any changes this build might create - but it's likely the developer has built the project before deploying)
 
 And then uses [wiki-page-creator-action](https://github.com/Decathlon/wiki-page-creator-action) to copy any markdown files from `docs/wiki` to the wiki. Requires a github access token to commit to the wiki
 
