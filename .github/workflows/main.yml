@@ -25,4 +25,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        ACTION_MAIL: laura.armitage@ivendi.com
+        ACTION_NAME: lauraivendi
+        OWNER: lauraivendi
+        REPO_NAME: test-wiki-docs
 
