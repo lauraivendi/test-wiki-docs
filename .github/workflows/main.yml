@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: build-markdown
-      run: docs/wiki/build.sh
+      run: chmod +x docs/wiki/build.sh && docs/wiki/build.sh
 
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
