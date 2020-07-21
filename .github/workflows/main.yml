@@ -24,9 +24,6 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
        dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-
-    - name: build-markdown
-      run: chmod +x docs/wiki/build.sh && docs/wiki/build.sh
     
     - name: build-application
       run: dotnet build ./src/Application/Application.sln
