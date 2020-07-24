@@ -31,7 +31,7 @@ namespace Application
         }
 
         /// <summary>
-        /// Some function with params <paramref name="parameter1"/> and <paramref name="parameter2"/>.
+        /// Some function with params <paramref name="parameter1"/> and <paramref name="parameter2"/>. ANother edit
         /// </summary>
         /// <returns>
         /// void.
