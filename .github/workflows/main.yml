@@ -6,6 +6,7 @@ on:
     paths:
       - 'src/Application/**'
       - 'docs/wiki/**'
+      - '.github/workflows/main.yml'
 
 jobs:
   build:
