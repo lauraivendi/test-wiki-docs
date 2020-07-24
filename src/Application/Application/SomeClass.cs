@@ -5,7 +5,7 @@ using System.Text;
 namespace Application
 {
     /// <summary>
-    /// This is some class with another change
+    /// This is some class with another change 2
     /// </summary>
     public class SomeClass
     {
