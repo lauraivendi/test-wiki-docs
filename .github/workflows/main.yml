@@ -25,10 +25,17 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
        dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-    
+   
     - name: build-application
       run: dotnet build ./src/Application/Application.sln
-
+      
+    - uses: EndBug/add-and-commit@v4
+      with:
+          add: 'docs/wiki'
+          message: 'Built wiki docs'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
       env:
@@ -38,3 +45,4 @@ jobs:
         OWNER: lauraivendi
         REPO_NAME: test-wiki-docs
         MD_FOLDER: docs/wiki
+        
