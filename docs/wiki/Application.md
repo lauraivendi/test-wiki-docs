@@ -23,7 +23,7 @@ This is some class
 
 ##### Summary
 
-Some function with params `parameter1` and `parameter2`.
+Some function with params `parameter1` and `parameter2`. Test change
 
 ##### Returns
 
