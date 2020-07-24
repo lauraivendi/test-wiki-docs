@@ -29,12 +29,15 @@ jobs:
     - name: build-application
       run: dotnet build ./src/Application/Application.sln
       
-    - uses: EndBug/add-and-commit@v4
-      with:
-          add: 'docs/wiki'
-          message: 'Built wiki docs'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+#     - uses: EndBug/add-and-commit@v4
+#       with:
+#           add: 'docs/wiki'
+#           message: 'Built wiki docs'
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+    - name: build-changelog
+      run: git log -- src/ivendi.Stock > docs/wiki/iVendi.Stock-changelog.md
     
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
