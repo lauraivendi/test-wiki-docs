@@ -24,7 +24,7 @@ jobs:
       run: dotnet build ./src/Application/Application.sln
       
     - name: build-changelog
-      run: git log > docs/wiki/iVendi.Stock-changelog.md
+      run: git log -- src/Application > docs/wiki/iVendi.Stock-changelog.md
     
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
