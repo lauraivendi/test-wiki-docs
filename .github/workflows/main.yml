@@ -37,7 +37,7 @@ jobs:
 #         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
     - name: build-changelog
-      run: git log -- src/ivendi.Stock > docs/wiki/iVendi.Stock-changelog.md
+      run: git log -- src/ivendi.Stock > docs/wiki/iVendi.Stock-changelog.md && cat docs/wiki/iVendi.Stock-changelog.md
     
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
