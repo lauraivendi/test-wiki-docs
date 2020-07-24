@@ -27,6 +27,9 @@ jobs:
       uses: heinrichreimer/github-changelog-generator-action@v2.1.1
       with:
         token: ${{ secrets.GH_PAT }}
+    
+    - name: copy
+      run: cat /github/workspace/CHANGELOG.md > docs/wiki/iVendi.Stock-changelog.md
      # run: git log -- src/Application > docs/wiki/iVendi.Stock-changelog.md
     
     - name: wiki-page-creator-action
