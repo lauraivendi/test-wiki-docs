@@ -24,7 +24,10 @@ jobs:
       run: dotnet build ./src/Application/Application.sln
       
     - name: build-changelog
-      run: git log -- src/Application > docs/wiki/iVendi.Stock-changelog.md
+      uses: heinrichreimer/github-changelog-generator-action@v2.1.1
+      with:
+        token: ${{ secrets.GH_PAT }}
+     # run: git log -- src/Application > docs/wiki/iVendi.Stock-changelog.md
     
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
