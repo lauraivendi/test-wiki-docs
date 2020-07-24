@@ -7,7 +7,7 @@ on:
       - 'src/Application/**'
       - 'docs/wiki/**'
       - '.github/workflows/main.yml'
-      - 'script.sh'
+      - '.github/workflows/script.sh'
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         token: ${{ secrets.GH_PAT }}
     
     - name: copy
-      run: chmod +x script.sh && ./script.sh
+      run: chmod +x .github/workflows/script.sh && ./.github/workflows/script.sh
       #run: cat /github/workspace/CHANGELOG.md > docs/wiki/iVendi.Stock-changelog.md
       #run: git log -- src/Application > docs/wiki/iVendi.Stock-changelog.md
     
